@@ -32,7 +32,7 @@ export const repeatDemo = () => {
 };
 
 function helloWorld(text){
-    return("Hello, world " + text);
+    return("Hello, world" + text);
 }
 
 
