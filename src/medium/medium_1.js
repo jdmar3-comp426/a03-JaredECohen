@@ -54,7 +54,7 @@ export function getMedian(array) {
 export function getStatistics(array) {
     let len = array.length;
     let mean = getSum(array) / len;
-    let variance = variance2(array,mean);
+    let variance = variance2(array,(getSum(array) / len));
     let stdev = Math.sqrt(variance);
     let obj = {'length':len, 'sum': getSum(array), 'mean':mean,'median':getMedian(array),'min': Math.min(...array), 'max': Math.max(...array),'variance':variance,'standard_deviation':stdev};
     return obj;
