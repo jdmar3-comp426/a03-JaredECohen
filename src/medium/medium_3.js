@@ -24,7 +24,9 @@ export function searchHighPower(car_data, minHorsepower, minTorque) {
             result.push(car);
         }
     }
-    result.sort((a, b) => (a.horsepower < b.horsepower) ? 1 : -1);
+    result.sort((a, b) => parseFloat(b.horsepower) - parseFloat(a.horsepower));
+    //(b.horsepower - a.horsepower) ? 1 : -1);
+    
     return result;
 }
 
