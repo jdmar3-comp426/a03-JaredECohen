@@ -51,6 +51,7 @@ export function identifyArray(array) {
  */
 export function removeKey(object, key) {
    delete object.key;
+   return object;
 }
 
 /**
