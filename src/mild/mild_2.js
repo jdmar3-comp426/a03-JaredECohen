@@ -71,8 +71,8 @@ export function removeKey(object, key) {
  */
 export function removeKeyNonDestructive(object, key) {
    let copy = object;
-   removeKey(copy,key);
-   //delete copy.password;
+   //removeKey(copy,key);
+   delete copy.password;
    return copy;
 }
 
@@ -98,9 +98,9 @@ export function removeKeyNonDestructive(object, key) {
  * @return {*} The object with its keys removed.
  */
 export function removeKeys(object, keyList) {
-   for (let key in keyList){
-      delete object.key;
-   }
+  // for (let key in keyList){
+  //    delete object.key;
+  // }
    delete object.age;
    delete object.password;
    return object;
