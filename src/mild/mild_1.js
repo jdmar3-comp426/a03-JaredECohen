@@ -43,7 +43,7 @@ export function maxAndMin(numbers) {
     //let min_max = new Map();
     let max = Math.max(...numbers);
     let min = Math.min(...numbers);
-    return ('min: ${min), max: ${max}');
+    return (`min: ${min}, max: ${max}`);
 }   
 
 /**
