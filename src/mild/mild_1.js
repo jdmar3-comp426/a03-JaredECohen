@@ -62,7 +62,7 @@ export function countArray(array) {
    //     array[x] = array[x] ? array[x] + 1 : 1;
    //     counts.push(array[x]);
     //}
-    result = { };
+    let result = {};
 for(var i = 0; i < a.length; ++i) {
     if(!result[a[i]])
         result[a[i]] = 0;
