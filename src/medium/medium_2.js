@@ -58,6 +58,7 @@ function hybrid(){
         sum = sum + mpg_data[i].hybrid;
     }
     return sum / arr.length;
+}
 
 /**
  * HINT: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
@@ -120,3 +121,4 @@ export const moreStats = {
     makerHybrids: undefined,
     avgMpgByYearAndHybrid: undefined
 };
+
