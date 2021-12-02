@@ -10,7 +10,7 @@
  */
 export function sumToString(a, b) {
     //let c = a+b;
-    return ('${a} +${b} = ${a+b}');
+    return ('${a} ${+} ${b} ${=} ${a+b}');
 
 }
 
