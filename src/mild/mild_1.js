@@ -63,10 +63,10 @@ export function countArray(array) {
    //     counts.push(array[x]);
     //}
     let result = {};
-for(var i = 0; i < a.length; ++i) {
-    if(!result[a[i]])
-        result[a[i]] = 0;
-    ++result[a[i]];
+for(var i = 0; i < array.length; ++i) {
+    if(!result[array[i]])
+        result[array[i]] = 0;
+    ++result[array[i]];
 }
     return result;
 }
