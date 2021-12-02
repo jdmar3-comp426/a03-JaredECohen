@@ -71,7 +71,8 @@ export function removeKey(object, key) {
  */
 export function removeKeyNonDestructive(object, key) {
    let copy = Object.assign({}, object);
-   delete copy.password;
+   removeKey(copy,key);
+   //delete copy.password;
    return copy;
 }
 
