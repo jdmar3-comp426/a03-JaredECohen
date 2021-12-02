@@ -160,7 +160,9 @@ function avgMPG(year){
 
 function avgMpgByYearAndHybrid(){
     let obj = {};
-    for (let i in getYears()){
+    let years = getYears();
+    let distinctYears = [...Set(years)];
+    for (let i of distinctYears){
         obj[i] = avgMPG(i);
     }
     return obj;
