@@ -43,7 +43,6 @@ function highwayMPG(){
     }
     return sum / arr.length;
 }
-}
 function getYears(){
     let years =[];
     for (let i in mpg_data){
