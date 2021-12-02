@@ -39,16 +39,11 @@ export function getIncreasingArray(startNumber, endNumber) {
  * see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
  * and https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
  */
-export function maxAndMin(numbers) {
-    //let min_max = new Map();
-    
+export function maxAndMin(numbers) {    
     let max = Math.max(...numbers);
     let min = Math.min(...numbers);
-    //min_max.set('max',max);
-    //min_max.set('min',min);
     const obj = { "max": max, "min": min};
     return obj;
-    //return (`min: ${min}, max: ${max}`);
 }   
 
 /**
@@ -62,10 +57,10 @@ export function maxAndMin(numbers) {
  *
  */
 export function countArray(array) {
-    let counts = new Map();
-    for (const num of array) {
-        array[num] = array[num] ? array[num] + 1 : 1;
-        counts.set(num,array[num]);
-    }
+    let counts = _.countBy(array);
+   // for (let x of array) {
+   //     array[x] = array[x] ? array[x] + 1 : 1;
+   //     counts.push(array[x]);
+    //}
     return counts;
 }
