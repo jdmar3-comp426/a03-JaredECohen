@@ -56,7 +56,7 @@ export function getStatistics(array) {
     let mean = getSum(array) / len;
     let variance = variance2(array,mean);
     let stdev = Math.sqrt(variance);
-    let obj = {'length':len, 'sum': getSum(array), 'mean':mean,'median':getMedian(array),'min': Math.min(...array), 'max': Math.max(...array),'variance':variance,'standard deviation':stdev};
+    let obj = {'length':len, 'sum': getSum(array), 'mean':mean,'median':getMedian(array),'min': Math.min(...array), 'max': Math.max(...array),'variance':variance,'standard_deviation':stdev};
     return obj;
 }
 
