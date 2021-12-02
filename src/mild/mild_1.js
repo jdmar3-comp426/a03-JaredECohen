@@ -45,6 +45,7 @@ export function maxAndMin(numbers) {
     let min = Math.min(...numbers);
     min_max.set('max',max);
     min_max.set('min',min);
+    return min_max;
     //return (`min: ${min}, max: ${max}`);
 }   
 
