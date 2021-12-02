@@ -28,11 +28,11 @@ export const repeat = (fn, n, ...params) => {
  *   10 times.
  */
 export const repeatDemo = () => {
-    repeat(helloWorld(),10,...[]);
+    repeat(helloWorld,10,...["!"]);
 };
 
-function helloWorld(){
-    return("Hello, world!");
+function helloWorld(text){
+    return("Hello, world " + text);
 }
 
 
