@@ -60,7 +60,14 @@ export function searchMpg(car_data, minCity, minHighway) {
  * @returns {[]} array of cars
  */
 export function searchName(car_data, searchTerm) {
-
+    let result = new Array();
+    for (let car of car_data){
+        if (car.id.toLowerCase().includes(searchTerm.toLowerCase())){
+            result.push(car);
+        }
+    }
+    result.sort((a, b) => parseFloat(a.id.toLowerCase().indexOf(searchTerm.toLowerCase())) - parseFloat(b.id.toLowerCase().indexOf(searchTerm.toLowerCase())));    
+    return result;
 }
 
 
