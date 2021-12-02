@@ -119,7 +119,7 @@ function hybrid(){
  */
 export const moreStats = {
     makerHybrids: undefined,
-    avgMpgByYearAndHybrid: 1
+    avgMpgByYearAndHybrid: avgMpgByYearAndHybrid()
 };
 
 function avgMPG(year){
@@ -159,9 +159,11 @@ function avgMPG(year){
 }
 
 function avgMpgByYearAndHybrid(){
+    let obj = {};
     for (let i in getYears()){
-
+        obj[i] = avgMPG(i);
     }
+    return obj;
 }
 
 
