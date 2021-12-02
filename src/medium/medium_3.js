@@ -80,5 +80,12 @@ export function searchName(car_data, searchTerm) {
  * @returns {[]} an array of car objects
  */
 export function searchByYear(car_data, years) {
-
+    let result = new Array();
+    for (let car of car_data){
+        if (years.includes(car.year)){
+            result.push(car);
+        }
+    }
+    result.sort((a, b) => parseFloat(b.year) - parseFloat(a.year));    
+    return result;
 }
