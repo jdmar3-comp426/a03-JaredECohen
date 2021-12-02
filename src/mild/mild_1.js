@@ -57,16 +57,11 @@ export function maxAndMin(numbers) {
  *
  */
 export function countArray(array) {
-   // let counts = _.countBy(array);
-   // for (let x of array) {
-   //     array[x] = array[x] ? array[x] + 1 : 1;
-   //     counts.push(array[x]);
-    //}
     let result = {};
-for(var i = 0; i < array.length; ++i) {
-    if(!result[array[i]])
-        result[array[i]] = 0;
-    ++result[array[i]];
-}
+    for(var i = 0; i < array.length; ++i) {
+        if(!result[array[i]])
+            result[array[i]] = 0;
+        ++result[array[i]];
+    }
     return result;
 }

@@ -6,7 +6,9 @@
  * returns: { type: 'number', value: 4 }
  */
 export function identifyVariable(variable) {
-
+   let type = typeof(variable);
+   let obj = {type, variable};
+   return obj;
 }
 
 
