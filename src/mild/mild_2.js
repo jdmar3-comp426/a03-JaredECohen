@@ -50,7 +50,7 @@ export function identifyArray(array) {
  obj now does not contain the `password` field
  */
 export function removeKey(object, key) {
-   delete object.password;
+   delete object.key;
 }
 
 /**
