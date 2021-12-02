@@ -24,9 +24,7 @@ export function searchHighPower(car_data, minHorsepower, minTorque) {
             result.push(car);
         }
     }
-    result.sort((a, b) => parseFloat(b.horsepower) - parseFloat(a.horsepower));
-    //(b.horsepower - a.horsepower) ? 1 : -1);
-    
+    result.sort((a, b) => parseFloat(b.horsepower) - parseFloat(a.horsepower));    
     return result;
 }
 
@@ -42,7 +40,14 @@ export function searchHighPower(car_data, minHorsepower, minTorque) {
  *
  */
 export function searchMpg(car_data, minCity, minHighway) {
-
+    let result = new Array();
+    for (let car of car_data){
+        if (car.highway_mpg >= minHighway && car.city_mpg >= minCity){
+            result.push(car);
+        }
+    }
+    result.sort((a, b) => parseFloat(b.highway_mpg) - parseFloat(a.highway_mpg));    
+    return result;
 }
 
 
