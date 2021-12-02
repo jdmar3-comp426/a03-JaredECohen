@@ -153,8 +153,8 @@ function avgMPG(year){
     highway_not_hy = highway_not_hy / highway_mpg_not_hy.length;
 
     let hybrid = {'city': city_hy, 'highway': highway_hy};
-    let not_hybrid = {'city': city_not_hy, 'highway': highway_not_hy};
-    let year_info = {hybrid, not_hybrid};
+    let notHybrid = {'city': city_not_hy, 'highway': highway_not_hy};
+    let year_info = {hybrid, notHybrid};
     return year_info;
 }
 
