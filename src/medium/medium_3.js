@@ -18,7 +18,14 @@ queries.
  *
  */
 export function searchHighPower(car_data, minHorsepower, minTorque) {
-
+    let result = new Array();
+    for (let car of car_data){
+        if (car.torque >= minTorque && car.horsepower >= minHorsepower){
+            result.push(car);
+        }
+    }
+    result.sort((a, b) => parseFloat(b.horsepower) - parseFloat(a.horsepower));    
+    return result;
 }
 
 
@@ -33,7 +40,14 @@ export function searchHighPower(car_data, minHorsepower, minTorque) {
  *
  */
 export function searchMpg(car_data, minCity, minHighway) {
-
+    let result = new Array();
+    for (let car of car_data){
+        if (car.highway_mpg >= minHighway && car.city_mpg >= minCity){
+            result.push(car);
+        }
+    }
+    result.sort((a, b) => parseFloat(b.highway_mpg) - parseFloat(a.highway_mpg));    
+    return result;
 }
 
 
@@ -46,7 +60,14 @@ export function searchMpg(car_data, minCity, minHighway) {
  * @returns {[]} array of cars
  */
 export function searchName(car_data, searchTerm) {
-
+    let result = new Array();
+    for (let car of car_data){
+        if (car.id.toLowerCase().includes(searchTerm.toLowerCase())){
+            result.push(car);
+        }
+    }
+    result.sort((a, b) => parseFloat(a.id.toLowerCase().indexOf(searchTerm.toLowerCase())) - parseFloat(b.id.toLowerCase().indexOf(searchTerm.toLowerCase())));    
+    return result;
 }
 
 
@@ -59,5 +80,12 @@ export function searchName(car_data, searchTerm) {
  * @returns {[]} an array of car objects
  */
 export function searchByYear(car_data, years) {
-
+    let result = new Array();
+    for (let car of car_data){
+        if (years.includes(car.year)){
+            result.push(car);
+        }
+    }
+    result.sort((a, b) => parseFloat(b.year) - parseFloat(a.year));    
+    return result;
 }
